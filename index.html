@@ -28,7 +28,7 @@
             width: 400px; /* Force logo width */
             height: 400px; /* Force logo height */
             opacity: 0;
-            left: calc(26.5% - 20px); /* Center horizontally and move slightly to the left */
+            left: calc(50% - 200px); /* Center horizontally */
             animation: logoAnimation 2s forwards;
         }
         @keyframes logoAnimation {
@@ -38,12 +38,16 @@
         .button-group {
             display: inline-block;
             position: relative;
-            margin: 20px;
+            margin: 10px; /* Reduce margin to bring buttons closer to the logo */
             opacity: 0;
             animation: fadeIn 1s 2s forwards; /* All buttons fade in at the same time after the logo animation */
+            top: -80px; /* Move the buttons up */
+            width: 200px; /* Ensure consistent width */
         }
         .fake-button, .real-button {
             display: block;
+            width: 100%; /* Ensure buttons take full width of the button group */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
             padding: 15px 25px;
             border: 2px solid #fff;
             background: rgba(0,0,0,0.5);
@@ -51,31 +55,39 @@
             cursor: pointer;
             transition: background 0.3s;
             border-radius: 8px;
-            top: -5px; /* Move the buttons slightly up */
+            text-align: center; /* Center text horizontally */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Display ellipsis for overflow text */
+        }
+        .fake-button {
+            margin-bottom: 10px; /* Ensure space below the fake button */
         }
         .fake-button:hover {
             background: rgba(255,255,255,0.3);
         }
-        .real-button {
+        .real-buttons-container {
             display: none;
             position: absolute;
             top: 100%; /* Position below the fake button */
             left: 0;
             right: 0;
+        }
+        .real-button {
             margin-top: 10px;
             padding: 10px 15px; /* Smaller than fake buttons */
             font-size: 14px; /* Slightly smaller font size */
         }
-        .show-real-buttons .real-button {
-            display: block;
-        }
         .real-button:hover {
             background: rgba(255,255,255,0.7);
+        }
+        .button-group.revealed .real-buttons-container {
+            display: block;
         }
         #donate-button {
             position: absolute;
             top: 20px;
-            right: 20px;
+            right: 40px;
             padding: 10px 20px;
             background: #ff0000;
             color: #fff;
@@ -103,34 +115,43 @@
         </div>
         <div class="button-row">
             <div class="button-group" id="button-group-1">
-                <div class="fake-button">Fake Button 1</div>
-                <a href="page1.html" class="real-button">Real Button 1</a>
+                <div class="fake-button">What We Do</div>
+                <div class="real-buttons-container">
+                    <a href="page1-1.html" class="real-button">The Need</a>
+                    <a href="page1-2.html" class="real-button">Firewood</a>
+                    <a href="page1-3.html" class="real-button">Fire Mitigation</a>
+                </div>
             </div>
             <div class="button-group" id="button-group-2">
-                <div class="fake-button">Fake Button 2</div>
-                <a href="page2.html" class="real-button">Real Button 2</a>
+                <div class="fake-button">Get Involved</div>
+                <div class="real-buttons-container">
+                    <a href="page2-1.html" class="real-button">Join Us</a>
+                    <a href="page2-2.html" class="real-button">Our Partners</a>
+                    <a href="page2-3.html" class="real-button">Store</a>
+                </div>
             </div>
             <div class="button-group" id="button-group-3">
-                <div class="fake-button">Fake Button 3</div>
-                <a href="page3.html" class="real-button">Real Button 3</a>
+                <div class="fake-button">About Us</div>
+                <div class="real-buttons-container">
+                    <a href="page3-1.html" class="real-button">Legal and Financial</a>
+                    <a href="page3-2.html" class="real-button">Diversity/Inclusion</a>
+                    <a href="page3-3.html" class="real-button">FAQ</a>
+                </div>
             </div>
             <div class="button-group" id="button-group-4">
-                <div class="fake-button">Fake Button 4</div>
-                <a href="page4.html" class="real-button">Real Button 4</a>
+                <div class="fake-button">Media</div>
+                <div class="real-buttons-container">
+                    <a href="page4-1.html" class="real-button">Our Journey</a>
+                    <a href="page4-2.html" class="real-button">Cords In The News</a>
+                    <a href="page4-3.html" class="real-button">Learn More</a>
+                </div>
             </div>
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const buttonGroups = document.querySelectorAll('.button-group');
-            buttonGroups.forEach(group => {
-                group.style.animation = 'fadeIn 1s 2s forwards';
-            });
-        });
-
         document.querySelectorAll('.fake-button').forEach(button => {
             button.addEventListener('mouseover', () => {
-                button.parentElement.classList.add('show-real-buttons');
+                button.parentElement.classList.add('revealed');
             });
         });
     </script>
