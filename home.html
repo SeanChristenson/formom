@@ -27,21 +27,16 @@
             position: relative;
             width: 400px;
             height: 400px;
-            opacity: 0;
+            opacity: 100;
             left: calc(50% - 200px);
             top: 48px;
-            animation: logoAnimation 2s forwards;
         }
-        @keyframes logoAnimation {
-            0% { top: 148px; transform: translateY(-50%); opacity: 0; }
-            100% { top: 48px; transform: translateY(0); opacity: 1; }
-        }
+
         .button-group {
             display: inline-block;
             position: relative;
             margin: 10px;
-            opacity: 0;
-            animation: fadeIn 1s 2s forwards;
+            opacity: 100;
             top: -32px;
             width: 200px;
         }
@@ -96,10 +91,6 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
         }
         #logo img {
             width: 100%;
