@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        #container {
+            text-align: center;
+            position: relative;
+            top: -132px;
+        }
+        #logo {
+            position: relative;
+            width: 300px; /* Reduced from 500px to 300px */
+            height: 300px; /* Reduced from 500px to 300px */
+            left: calc(50% - 150px); /* Adjusted for the smaller size */
+            top: 0.2in; /* Moved up by half an inch */
+        }
+        .button-group {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            top: 0.2in; /* Move the buttons down by an inch */
+            width: 200px;
+        }
+        .fake-button, .donate-button, .new-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 25px;
+            border: 2px solid #fff;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-radius: 8px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .fake-button, .donate-button {
+            margin-bottom: 10px;
+        }
+        .fake-button:hover, .donate-button:hover, .new-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        #logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        footer {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-top: 2px solid #fff;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-container {
+            background: rgba(0, 0, 0, 0.5); /* Black transparent background */
+            padding: 20px;
+            border: 2px solid #fff; /* White outline */
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .text-wrapper {
+            position: relative;
+            top: -20px; /* Adjust this value to move the text container up or down */
+        }
+        .new-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            width: 100%; /* Adjust width of the container */
+        }
+        .new-button {
+            width: calc(45% - 10px); /* Adjust width of each button */
+            padding: 10px 0; /* Adjust vertical padding */
+            border: 2px solid #fff;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="Logo1.png" alt="Logo" />
+        </div>
+        <div class="text-wrapper">
+            <div class="text-container">
+                <p>When coming up with our tagline, we had a LOT of ideas. Some were funny. Some were serious. Most we discarded, but one really stuck with us. It wasn’t a good one. In fact, it was pretty bad, but it was honest. The discarded tagline was “Because 4 th of July is coming and so is -8.” It was said as a joke, but it is true.</p>
+                <p>Summer is coming. It will be dry and hot. Tens of thousands of tourists will stream into Montana. There will be campfires, fireworks, thunderstorms and lightning, and there will be forest fires.</p>
+                <p>Winter is coming. There will be snow, ice, wind, and freezing rain. Temperatures will plummet and some of our neighbors won’t have enough heat.</p>
+                <p>We know these things to be certain. We also know that fire mitigation clearing reduces the size and impact of fires as surely as firewood helps to keep homes warm. That’s why we do both.</p>
+            </div>
+        </div>
+        <div class="new-buttons">
+            <a href="fire_mitigation.html" class="new-button">Fire Mitigation Help</a>
+            <a href="firewood.html" class="new-button">Firewood Help</a>
+        </div>
+        <div class="button-row">
+            <div class="button-group">
+                <a href="whatwedo.html" class="fake-button">What We Do</a>
+            </div>
+            <div class="button-group">
+                <a href="getinvolved.html" class="fake-button">Get Involved</a>
+            </div>
+            <div class="button-group">
+                <a href="aboutus.html" class="fake-button">About Us</a>
+            </div>
+            <div class="button-group">
+                <a href="donate.html" class="donate-button">Donate</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 EIN#99-0442130
+        </div>
+        <div>
+            Cords for Care is a U.S. 501(C)(3)
+        </div>
+    </footer>
+</body>
+</html>

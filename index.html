@@ -13,6 +13,7 @@
             background: url('background.png') no-repeat center center fixed;
             background-size: cover;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-family: 'Arial', sans-serif;
@@ -25,12 +26,20 @@
         }
         #logo {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 500px; /* Increased from 400px to 500px */
+            height: 500px; /* Increased from 400px to 500px */
             opacity: 0;
-            left: calc(50% - 200px);
+            left: calc(50% - 250px); /* Adjusted for the larger size */
             top: 48px;
             animation: logoAnimation 2s forwards;
+        }
+        #tagline {
+            font-size: 24px;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 2s 2s forwards;
+            position: relative;
+            top: -1in; /* Moved 1 inch up */
         }
         @keyframes logoAnimation {
             0% { top: 148px; transform: translateY(-50%); opacity: 0; }
@@ -42,10 +51,10 @@
             margin: 10px;
             opacity: 0;
             animation: fadeIn 1s 2s forwards;
-            top: -32px;
+            top: 0.5in; /* Move the buttons up 1 inch */
             width: 200px;
         }
-        .fake-button, .real-button {
+        .fake-button, .donate-button {
             display: block;
             width: 100%;
             box-sizing: border-box;
@@ -61,41 +70,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        .fake-button {
+        .fake-button, .donate-button {
             margin-bottom: 10px;
         }
-        .fake-button:hover {
+        .fake-button:hover, .donate-button:hover {
             background: rgba(255,255,255,0.3);
-        }
-        .real-buttons-container {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-        }
-        .real-button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            font-size: 14px;
-        }
-        .real-button:hover {
-            background: rgba(255,255,255,0.7);
-        }
-        .button-group.revealed .real-buttons-container {
-            display: block;
-        }
-        #donate-button {
-            position: absolute;
-            top: 68px;
-            right: 40px;
-            padding: 10px 20px;
-            background: #ff0000;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
         }
         @keyframes fadeIn {
             0% { opacity: 0; }
@@ -106,56 +85,51 @@
             height: 100%;
             object-fit: contain;
         }
+        footer {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-top: 2px solid #fff;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s 2s forwards;
+        }
     </style>
 </head>
 <body>
-    <button id="donate-button">Donate</button>
     <div id="container">
         <div id="logo">
             <img src="Logo1.png" alt="Logo" />
+            <div id="tagline">We care, so you don’t have to. JK.</div>
         </div>
         <div class="button-row">
-            <div class="button-group" id="button-group-1">
-                <div class="fake-button">What We Do</div>
-                <div class="real-buttons-container">
-                    <a href="the_need.html" class="real-button">The Need</a>
-                    <a href="firewood.html" class="real-button">Firewood</a>
-                    <a href="fire_mitigation.html" class="real-button">Fire Mitigation</a>
-                </div>
+            <div class="button-group">
+                <a href="whatwedo.html" class="fake-button">What We Do</a>
             </div>
-            <div class="button-group" id="button-group-2">
-                <div class="fake-button">Get Involved</div>
-                <div class="real-buttons-container">
-                    <a href="join_us.html" class="real-button">Join Us</a>
-                    <a href="our_partners.html" class="real-button">Our Partners</a>
-                    <a href="store.html" class="real-button">Store</a>
-                </div>
+            <div class="button-group">
+                <a href="getinvolved.html" class="fake-button">Get Involved</a>
             </div>
-            <div class="button-group" id="button-group-3">
-                <div class="fake-button">About Us</div>
-                <div class="real-buttons-container">
-                    <a href="legal_and_financial.html" class="real-button">Legal and Financial</a>
-                    <a href="diversity_inclusion.html" class="real-button">Diversity/Inclusion</a>
-                    <a href="faq_contact_us.html" class="real-button">FAQ/Contact Us</a>
-                </div>
+            <div class="button-group">
+                <a href="aboutus.html" class="fake-button">About Us</a>
             </div>
-            <div class="button-group" id="button-group-4">
-                <div class="fake-button">Media</div>
-                <div class="real-buttons-container">
-                    <a href="our_journey.html" class="real-button">Our Journey</a>
-                    <a href="cords_in_the_news.html" class="real-button">Cords In The News</a>
-                    <a href="learn_more.html" class="real-button">Learn More</a>
-                </div>
+            <div class="button-group">
+                <a href="donate.html" class="donate-button">Donate</a>
             </div>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.fake-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const parentGroup = button.parentElement;
-                parentGroup.classList.toggle('revealed');
-            });
-        });
-    </script>
+    <footer>
+        <div>
+            Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 EIN#99-0442130
+        </div>
+        <div>
+            Cords for Care is a U.S. 501(C)(3)
+        </div>
+    </footer>
 </body>
 </html>
