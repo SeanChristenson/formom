@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cords for Care</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        #container {
+            text-align: center;
+            position: relative;
+            top: -132px;
+            width: 100%; /* Ensures container spans full width */
+        }
+        #logo {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            left: calc(50% - 150px);
+            top: -1.15in;
+        }
+        .button-group {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            top: -4.45in;
+            width: 200px;
+        }
+        .fake-button, .donate-button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 25px;
+            border: 2px solid #fff;
+            background: rgba(0,0,0);
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-radius: 8px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .fake-button:hover, .donate-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        #logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        footer {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0);
+            border-top: 2px solid #fff;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-container {
+            background: rgba(0, 0, 0);
+            padding: 20px;
+            border: 2px solid #fff;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .text-top {
+            position: absolute;
+            top: 1.9in;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 500px;
+        }
+        .text-wrapper {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 3.7in;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .firewood-text {
+            position: absolute;
+            color: #fff;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            font-size: 2em;
+            top: 285px;
+            left: 835px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="Logo1.png" alt="Logo" />
+        </div>
+        <div class="text-container text-top">
+            <p>At Cords for Care, our culture of belonging is about uniting people of different backgrounds, beliefs, abilities and experiences and offering them an environment where everyone feels valued and works together to achieve meaningful goals.</p>
+        </div>
+        <div class="text-wrapper">
+            <div class="text-container text-diversity">
+                <div class="section-title">Diversity</div>
+                <p>We emphasize diversity in the great variety of people we work with and help. That includes diversity of race, gender, economic position, religion, education, sexuality, perspective, career background, and political affiliation, among others. We focus on creating a safe space for our board, team leaders, staff, volunteers, interns, and the people we help. Our free or low-cost fire mitigation and firewood distribution services are offered to all people in need, regardless of race, gender, economic position, religion, education, sexuality, perspective, career background, or political affiliation.</p>
+            </div>
+            <div class="text-container text-inclusion">
+                <div class="section-title">Inclusion</div>
+                <p>We value inclusivity and strive for an environment where our board, team leaders, staff, volunteers, interns, and the people we help collaborate, make suggestions, and respect and listen to diverse opinions and suggestions offered. We welcome board members, team leaders, volunteers, interns, and partners of all races, genders, economic positions, religions, educational backgrounds, sexual orientations, perspectives, career backgrounds, political affiliations, and abilities.</p>
+            </div>
+            <div class="text-container text-respect">
+                <div class="section-title">Respect</div>
+                <p>We believe that each person must be considered as an individual. We must respect their diversity and dignity and recognize their merit. Our board, staff, and team leaders model inclusivity and respectful behavior and we ask that all of our volunteers, interns, partners, and the people we help to do the same.</p>
+            </div>
+        </div>
+        <div class="button-row">
+            <div class="button-group">
+                <a href="whatwedo.html" class="fake-button">What We Do</a>
+            </div>
+            <div class="button-group">
+                <a href="getinvolved.html" class="fake-button">Get Involved</a>
+            </div>
+            <div class="button-group">
+                <a href="aboutus.html" class="fake-button">About Us</a>
+            </div>
+            <div class="button-group">
+                <a href="donate.html" class="donate-button">Donate</a>
+            </div>
+        </div>
+    </div>
+    <div class="firewood-text">Diversity/Inclusion</div>
+    <footer>
+        <div>
+            Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 
+        </div>
+        <div>
+            Cords for Care is a U.S. 501(C)(3) EIN#99-0442130
+        </div>
+    </footer>
+</body>
+</html>

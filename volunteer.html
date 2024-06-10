@@ -29,16 +29,16 @@
             width: 300px; /* Reduced from 500px to 300px */
             height: 300px; /* Reduced from 500px to 300px */
             left: calc(50% - 150px); /* Adjusted for the smaller size */
-            top: 0.5in; /* Moved up by half an inch */
+            top: 1.6in; /* Moved up by half an inch */
         }
         .button-group {
             display: inline-block;
             position: relative;
             margin: 10px;
-            top: -6.0in; /* Move the buttons down by an inch */
+            top: -7.3in; /* Move the buttons down by an inch */
             width: 200px;
         }
-        .fake-button, .donate-button, .new-button {
+        .fake-button, .donate-button {
             display: block;
             width: 100%;
             box-sizing: border-box;
@@ -57,8 +57,8 @@
         .fake-button, .donate-button {
             margin-bottom: 10px;
         }
-        .fake-button:hover, .donate-button:hover, .new-button:hover {
-            background: rgba(255,255,255,0.3);
+        .fake-button:hover, .donate-button:hover {
+            background: rgba(255,255,255,0.3)
         }
         #logo img {
             width: 100%;
@@ -79,43 +79,58 @@
             align-items: center;
         }
         .text-container {
+            display: flex;
+            justify-content: space-between;
             background: rgba(0, 0, 0); /* Black transparent background */
             padding: 20px;
             border: 2px solid #fff; /* White outline */
-            max-width: 700px;
+            max-width: 1000px;
             margin: 0 auto;
-        }
-        .text-wrapper {
             position: relative;
-            top: 40px; /* Adjust this value to move the text container up or down */
+            top: 1.35in; /* Move the container down by half an inch */
         }
-        .new-buttons {
-            position: absolute; /* Use absolute positioning */
-            top: 7in; /* Adjust this value to move the buttons up or down */
-            left: 1in; /* Adjust this value to move the buttons left or right */
+        .text-content, .form-container {
+            width: 48%;
+        }
+        .form-container form {
             display: flex;
-            justify-content: center; /* Center horizontally */
-            width: calc(100% - 2in); /* Adjust width of the container */
+            flex-direction: column;
         }
-        .new-button {
-            width: calc(45% - 10px); /* Adjust width of each button */
-            padding: 10px 0; /* Adjust vertical padding */
+        .form-container form input, 
+        .form-container form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1); /* Updated for better visibility */
+            color: #fff; /* Font color for input and textarea */
+        }
+        .form-container form input::placeholder, 
+        .form-container form textarea::placeholder {
+            color: #ddd;
+        }
+        .form-container form textarea {
+            resize: vertical;
+        }
+        .form-container form button {
+            padding: 10px;
             border: 2px solid #fff;
-            background: rgba(0,0,0);
-            color: #fff;
-            border-radius: 8px;
-            text-align: center;
+            background: rgba(0,0,0,0.7); /* Updated for better visibility */
+            color: #fff; /* Font color for button */
             cursor: pointer;
             transition: background 0.3s;
-            margin: 0 5px; /* Add some space between the buttons */
+            border-radius: 8px;
+        }
+        .form-container form button:hover {
+            background: rgba(255,255,255,0.3);
         }
         .firewood-text {
             position: absolute;
             color: #fff;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
             font-size: 2em; /* Adjust size as needed */
-            top: 285px; /* Adjust position as needed */
-            left: 875px; /* Adjust position as needed */
+            top: 265px; /* Adjust position as needed */
+            left: 895px; /* Adjust position as needed */
         }
     </style>
 </head>
@@ -124,17 +139,26 @@
         <div id="logo">
             <img src="Logo1.png" alt="Logo" />
         </div>
-        <div class="text-wrapper">
-            <div class="text-container">
-                <p>When coming up with our tagline, we had a LOT of ideas. Some were funny. Some were serious. Most we discarded, but one really stuck with us. It wasn’t a good one. In fact, it was pretty bad, but it was honest. The discarded tagline was “Because 4 th of July is coming and so is -8.” It was said as a joke, but it is true.</p>
-                <p>Summer is coming. It will be dry and hot. Tens of thousands of tourists will stream into Montana. There will be campfires, fireworks, thunderstorms and lightning, and there will be forest fires.</p>
-                <p>Winter is coming. There will be snow, ice, wind, and freezing rain. Temperatures will plummet and some of our neighbors won’t have enough heat.</p>
-                <p>We know these things to be certain. We also know that fire mitigation clearing reduces the size and impact of fires as surely as firewood helps to keep homes warm. That’s why we do both.</p>
+        <div class="text-container">
+            <div class="text-content">
+                <p>People who are willing to offer their time to better their communities are always more than welcome at Cords for Care.</p>
+                <p>By volunteering with us, you can support your neighbors and your community, while helping to make the Flathead  Valley a safer place during fire season. Whether it is delivering firewood, felling a tree, or organizing a fundraiser, we have a place for you.</p>
+                <p>If you are interested in volunteering for our organization, please  fill out the form to the right and let us know what you are most  interested in. We will get back to you with a follow-up email and further steps.</p>
             </div>
-        </div>
-        <div class="new-buttons">
-            <a href="fire_mitigation.html" class="new-button">Fire Mitigation Help</a>
-            <a href="firewood.html" class="new-button">Firewood Help</a>
+            <div class="form-container">
+                <form>
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                    <input type="number" name="household_size" placeholder="Number of people in your household?" required>
+                    <input type="text" name="primary_heat_source" placeholder="Primary source of heat?" required>
+                    <input type="number" name="fireplaces_wood_stoves" placeholder="Number of fireplaces/wood stoves?" required>
+                    <textarea name="situation_description" rows="4" placeholder="Briefly describe your situation" required></textarea>
+                    <input type="text" name="referral" placeholder="Did someone refer you?">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
         <div class="button-row">
             <div class="button-group">
@@ -151,7 +175,7 @@
             </div>
         </div>
     </div>
-    <div class="firewood-text">What We Do</div>
+    <div class="firewood-text">Volunteer</div>
     <footer>
         <div>
             Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 
