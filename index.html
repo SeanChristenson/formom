@@ -17,8 +17,8 @@
             background-size: cover;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center vertically */
-            align-items: center;     /* Center horizontally */
+            justify-content: center;
+            align-items: center;
             font-family: 'Arial', sans-serif;
             color: #fff;
         }
@@ -27,13 +27,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 20px; /* Add padding to avoid content touching the screen edges */
         }
         #logo {
             width: 80%;
             max-width: 500px;
             opacity: 0;
             animation: logoAnimation 2s forwards;
-            margin-top: 300px; /* Move the logo up by 100px */
+            margin-top: 25vh; /* Move the logo up by 10% of the viewport height */
         }
         #tagline {
             font-size: 1.5rem;
@@ -49,7 +50,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: -550px;
+            margin-top: 20px;
             opacity: 0;
             animation: fadeIn 1s 2s forwards;
         }
@@ -127,7 +128,7 @@
     </div>
     <footer>
         <div>
-            Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937
+            Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 
         </div>
         <div>
             Cords for Care is a U.S. 501(C)(3) EIN#99-0442130
