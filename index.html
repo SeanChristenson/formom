@@ -5,67 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cords for Care</title>
     <style>
-        html {
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* Prevent overflow on the html element */
+            overflow-x: hidden;
         }
         body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
             background: url('background.png') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* Center vertically */
+            align-items: center;     /* Center horizontally */
             font-family: 'Arial', sans-serif;
             color: #fff;
-            overflow-y: scroll; /* Force vertical scrollbar on the body */
         }
         #container {
             text-align: center;
-            position: relative;
-            top: -132px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         #logo {
-            position: relative;
-            width: 500px; /* Increased from 400px to 500px */
-            height: 500px; /* Increased from 400px to 500px */
+            width: 80%;
+            max-width: 500px;
             opacity: 0;
-            left: calc(50% - 250px); /* Adjusted for the larger size */
-            top: 98px;
             animation: logoAnimation 2s forwards;
+            margin-top: 300px; /* Move the logo up by 100px */
         }
         #tagline {
-            font-size: 24px;
+            font-size: 1.5rem;
             margin-top: 10px;
             opacity: 0;
             animation: fadeIn 2s 2s forwards;
-            position: relative;
-            top: -1in; /* Moved 1 inch up */
         }
         @keyframes logoAnimation {
-            0% { top: 148px; transform: translateY(-50%); opacity: 0; }
-            100% { top: 98px; transform: translateY(0); opacity: 1; }
+            0% { transform: translateY(-50%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
-        .button-group {
-            display: inline-block;
-            position: relative;
-            margin: 10px;
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: -550px;
             opacity: 0;
             animation: fadeIn 1s 2s forwards;
-            top: -3.5in; /* Move the buttons up 1 inch */
-            width: 200px;
+        }
+        .button-group {
+            margin: 10px;
         }
         .fake-button, .donate-button {
             display: block;
-            width: 100%;
-            box-sizing: border-box;
             padding: 15px 25px;
             border: 2px solid #fff;
             background: rgba(0,0,0);
@@ -78,9 +70,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-        .fake-button, .donate-button {
-            margin-bottom: 10px;
-        }
         .fake-button:hover, .donate-button:hover {
             background: rgba(255,255,255,0.3);
         }
@@ -90,23 +79,28 @@
         }
         #logo img {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
         }
         footer {
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
-            position: absolute;
-            bottom: 0;
+            position: relative;
             background: rgba(0, 0, 0);
             border-top: 2px solid #fff;
             color: #fff;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             opacity: 0;
             animation: fadeIn 1s 2s forwards;
+            margin-top: auto;
+        }
+        @media (min-width: 600px) {
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+            }
         }
     </style>
 </head>
@@ -133,10 +127,10 @@
     </div>
     <footer>
         <div>
-            Cords for Care 704C 13th St. E, #403 Whitefish
+            Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937
         </div>
         <div>
-            Cords for Care is a U.S. 501(C)(3) MT 59937 EIN#99-0442130
+            Cords for Care is a U.S. 501(C)(3) EIN#99-0442130
         </div>
     </footer>
 </body>
