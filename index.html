@@ -28,14 +28,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px; /* Add padding to avoid content touching the screen edges */
+            padding: 20px;
         }
         #logo {
             width: 80%;
             max-width: 500px;
             opacity: 0;
             animation: logoAnimation 2s forwards;
-            margin-top: 25vh; /* Move the logo up by 10% of the viewport height */
+            margin-top: 25vh;
         }
         #tagline {
             font-size: 1.5rem;
@@ -102,6 +102,39 @@
             footer {
                 flex-direction: row;
                 justify-content: space-between;
+            }
+        }
+        @media (max-width: 768px) {
+            #logo {
+                width: 90%;
+                margin-top: 20vh;
+            }
+            #tagline {
+                font-size: 1.2rem;
+            }
+            .fake-button, .donate-button {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 100%;
+                margin-top: 15vh;
+            }
+            #tagline {
+                font-size: 1rem;
+            }
+            .fake-button, .donate-button {
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+            .button-group {
+                margin: 5px;
+            }
+            footer {
+                padding: 10px;
+                font-size: 0.8rem;
             }
         }
     </style>
