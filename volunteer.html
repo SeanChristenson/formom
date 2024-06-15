@@ -35,7 +35,7 @@
             display: inline-block;
             position: relative;
             margin: 10px;
-            top: -7.3in; /* Move the buttons down by an inch */
+            top: -7.33in; /* Move the buttons down by an inch */
             width: 200px;
         }
         .fake-button, .donate-button {
@@ -87,7 +87,7 @@
             max-width: 1000px;
             margin: 0 auto;
             position: relative;
-            top: 1.35in; /* Move the container down by half an inch */
+            top: 1.05in; /* Move the container down by half an inch */
         }
         .text-content, .form-container {
             width: 48%;
@@ -124,23 +124,63 @@
         .form-container form button:hover {
             background: rgba(255,255,255,0.3);
         }
-        .firewood-text {
-            position: absolute;
-            color: #fff;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
-            font-size: 2em; /* Adjust size as needed */
-            top: 265px; /* Adjust position as needed */
-            left: 895px; /* Adjust position as needed */
+        @media (max-width: 768px) {
+            #logo {
+                width: 200px;
+                height: 200px;
+                left: calc(50% - 100px);
+                top: 1.2in;
+            }
+            .button-group {
+                top: -6in;
+                width: 150px;
+            }
+            .fake-button, .donate-button {
+                padding: 10px 20px;
+            }
+            .text-container {
+                flex-direction: column;
+                top: 1in;
+                padding: 15px;
+            }
+            .text-content, .form-container {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 150px;
+                height: 150px;
+                left: calc(50% - 75px);
+                top: 0.8in;
+            }
+            .button-group {
+                top: -5.5in;
+                width: 120px;
+            }
+            .fake-button, .donate-button {
+                padding: 8px 15px;
+            }
+            .text-container {
+                top: 0.7in;
+                padding: 10px;
+            }
+            .text-content, .form-container {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="logo">
-            <img src="Logo1.png" alt="Logo" />
+            <a href="home.html">
+                <img src="Logo1.png" alt="Logo" />
+            </a>
         </div>
         <div class="text-container">
             <div class="text-content">
+                <p style="font-weight: bold; text-align: center;">Volunteer</p>
                 <p>People who are willing to offer their time to better their communities are always more than welcome at Cords for Care.</p>
                 <p>By volunteering with us, you can support your neighbors and your community, while helping to make the Flathead  Valley a safer place during fire season. Whether it is delivering firewood, felling a tree, or organizing a fundraiser, we have a place for you.</p>
                 <p>If you are interested in volunteering for our organization, please  fill out the form to the right and let us know what you are most  interested in. We will get back to you with a follow-up email and further steps.</p>
@@ -175,7 +215,6 @@
             </div>
         </div>
     </div>
-    <div class="firewood-text">Volunteer</div>
     <footer>
         <div>
             Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 

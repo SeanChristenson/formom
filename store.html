@@ -84,6 +84,10 @@
             border: 2px solid #fff; /* White outline */
             max-width: 700px;
             margin: 0 auto;
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center the container */
         }
         .text-wrapper {
             position: relative;
@@ -109,26 +113,64 @@
             transition: background 0.3s;
             margin: 0 5px; /* Add some space between the buttons */
         }
-        .firewood-text {
-            position: absolute;
-            color: #fff;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
-            font-size: 2em; /* Adjust size as needed */
-            top: 285px; /* Adjust position as needed */
-            left: 920px; /* Adjust position as needed */
+        @media (max-width: 768px) {
+            #logo {
+                width: 200px;
+                height: 200px;
+                left: calc(50% - 100px);
+                top: -0.5in;
+            }
+            .button-group {
+                top: -4.5in;
+                width: 150px;
+            }
+            .fake-button, .donate-button, .new-button {
+                padding: 10px 20px;
+            }
+            footer {
+                padding: 15px;
+            }
+            .text-container {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 150px;
+                height: 150px;
+                left: calc(50% - 75px);
+                top: -0.3in;
+            }
+            .button-group {
+                top: -3.5in;
+                width: 120px;
+            }
+            .fake-button, .donate-button, .new-button {
+                padding: 8px 15px;
+            }
+            footer {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+            .text-container {
+                padding: 10px;
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="logo">
-            <img src="Logo1.png" alt="Logo" />
+            <a href="home.html">
+                <img src="Logo1.png" alt="Logo" />
+            </a>
         </div>
         <div class="text-wrapper">
             <div class="text-container">
                 <p>Under Construction!</p>
             </div>
-        </div>
         </div>
         <div class="button-row">
             <div class="button-group">
@@ -145,7 +187,6 @@
             </div>
         </div>
     </div>
-    <div class="firewood-text">Store</div>
     <footer>
         <div>
             Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 

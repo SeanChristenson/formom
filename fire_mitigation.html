@@ -35,7 +35,7 @@
             display: inline-block;
             position: relative;
             margin: 10px;
-            top: -7.25in; /* Move the buttons down by an inch */
+            top: -7.33in; /* Move the buttons down by an inch */
             width: 200px;
         }
         .fake-button, .donate-button {
@@ -87,7 +87,7 @@
             max-width: 1000px;
             margin: 0 auto;
             position: relative;
-            top: 1.35in; /* Move the container down by half an inch */
+            top: 1.05in; /* Move the container down by half an inch */
         }
         .text-content, .form-container {
             width: 48%;
@@ -124,23 +124,63 @@
         .form-container form button:hover {
             background: rgba(255,255,255,0.3);
         }
-        .firewood-text {
-            position: absolute;
-            color: #fff;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
-            font-size: 2em; /* Adjust size as needed */
-            top: 265px; /* Adjust position as needed */
-            left: 865px; /* Adjust position as needed */
+        @media (max-width: 768px) {
+            #logo {
+                width: 200px;
+                height: 200px;
+                left: calc(50% - 100px);
+                top: 1.2in;
+            }
+            .button-group {
+                top: -6in;
+                width: 150px;
+            }
+            .fake-button, .donate-button {
+                padding: 10px 20px;
+            }
+            .text-container {
+                flex-direction: column;
+                top: 1in;
+                padding: 15px;
+            }
+            .text-content, .form-container {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 150px;
+                height: 150px;
+                left: calc(50% - 75px);
+                top: 0.8in;
+            }
+            .button-group {
+                top: -5.5in;
+                width: 120px;
+            }
+            .fake-button, .donate-button {
+                padding: 8px 15px;
+            }
+            .text-container {
+                top: 0.7in;
+                padding: 10px;
+            }
+            .text-content, .form-container {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="logo">
-            <img src="Logo1.png" alt="Logo" />
+            <a href="home.html">
+                <img src="Logo1.png" alt="Logo" />
+            </a>
         </div>
         <div class="text-container">
             <div class="text-content">
+                <p style="font-weight: bold; text-align: center;">Fire Mitigation</p>
                 <p>In 2023, 1604 fires destroyed 117,553 acres of land throughout Montana.</p>
                 <p>Reducing forest density and thinning tree canopies to prevent fires from leaping across treetops can significantly mitigate the intensity and spread of wildfires and help keep our homes and loved ones safe. So, why don’t more people do it?</p>
                 <p>We think the answer is simple. Most people do not have the skill set to do the work themselves and, when they try to hire a professional, they hit roadblock after roadblock. The cost is prohibitively expensive, no one can get them on the schedule for one to two years, or their job is simply “too small” for the contractor to consider.</p>
@@ -176,7 +216,6 @@
             </div>
         </div>
     </div>
-    <div class="firewood-text">Fire Mitigation</div>
     <footer>
         <div>
             Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 

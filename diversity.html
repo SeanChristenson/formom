@@ -36,7 +36,7 @@
             display: inline-block;
             position: relative;
             margin: 10px;
-            top: -4.45in;
+            top: -4.5in;
             width: 200px;
         }
         .fake-button, .donate-button {
@@ -86,7 +86,7 @@
         }
         .text-top {
             position: absolute;
-            top: 1.9in;
+            top: 1.4in;
             left: 50%;
             transform: translateX(-50%);
             max-width: 500px;
@@ -95,7 +95,7 @@
             display: flex;
             justify-content: space-between;
             position: absolute;
-            top: 3.7in;
+            top: 3.5in;
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
@@ -104,22 +104,87 @@
             font-weight: bold;
             margin-top: 20px;
         }
-        .firewood-text {
-            position: absolute;
-            color: #fff;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-            font-size: 2em;
-            top: 285px;
-            left: 835px;
+        @media (max-width: 768px) {
+            #logo {
+                width: 200px;
+                height: 200px;
+                left: calc(50% - 100px);
+                top: -1.5in;
+            }
+            .button-group {
+                top: -4.0in;
+                width: 150px;
+            }
+            .fake-button, .donate-button {
+                padding: 10px 20px;
+            }
+            .text-top {
+                top: 2.5in;
+                max-width: 400px;
+                font-size: 0.9em;
+            }
+            .text-wrapper {
+                top: 4.5in;
+                width: 90%;
+            }
+            .text-container {
+                padding: 15px;
+                font-size: 0.9em;
+                max-width: 400px;
+            }
+            footer {
+                padding: 15px;
+                font-size: 0.9em;
+                position: static; /* Change position to static to allow it to flow in document flow */
+                margin-top: 20px; /* Add margin-top to ensure it doesn't overlap with content */
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 150px;
+                height: 150px;
+                left: calc(50% - 75px);
+                top: -1.0in;
+            }
+            .button-group {
+                top: -3.5in;
+                width: 120px;
+            }
+            .fake-button, .donate-button {
+                padding: 8px 15px;
+            }
+            .text-top {
+                top: 2.0in;
+                max-width: 300px;
+                font-size: 0.8em;
+            }
+            .text-wrapper {
+                top: 3.5in;
+                width: 95%;
+            }
+            .text-container {
+                padding: 10px;
+                font-size: 0.8em;
+                max-width: 300px;
+            }
+            footer {
+                padding: 10px;
+                font-size: 0.8em;
+                position: static; /* Change position to static to allow it to flow in document flow */
+                margin-top: 20px; /* Add margin-top to ensure it doesn't overlap with content */
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="logo">
-            <img src="Logo1.png" alt="Logo" />
+            <a href="home.html">
+                <img src="Logo1.png" alt="Logo" />
+            </a>
         </div>
         <div class="text-container text-top">
+            <p><strong>Diversity/Inclusion</strong></p>
             <p>At Cords for Care, our culture of belonging is about uniting people of different backgrounds, beliefs, abilities and experiences and offering them an environment where everyone feels valued and works together to achieve meaningful goals.</p>
         </div>
         <div class="text-wrapper">
@@ -151,7 +216,6 @@
             </div>
         </div>
     </div>
-    <div class="firewood-text">Diversity/Inclusion</div>
     <footer>
         <div>
             Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 

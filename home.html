@@ -26,22 +26,22 @@
         }
         #logo {
             position: relative;
-            width: 500px; /* Increased from 400px to 500px */
-            height: 500px; /* Increased from 400px to 500px */
-            left: calc(50% - 250px); /* Adjusted for the larger size */
+            width: 500px;
+            height: 500px;
+            left: calc(50% - 250px);
             top: 98px;
         }
         #tagline {
             font-size: 24px;
             margin-top: 10px;
             position: relative;
-            top: -1in; /* Moved 1 inch up */
+            top: -1in;
         }
         .button-group {
             display: inline-block;
             position: relative;
             margin: 10px;
-            top: -5.5in; /* Move the buttons up 1 inch */
+            top: -5.5in;
             width: 200px;
         }
         .fake-button, .donate-button, .new-button {
@@ -83,6 +83,49 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        @media (max-width: 768px) {
+            #logo {
+                width: 300px;
+                height: 300px;
+                left: calc(50% - 150px);
+            }
+            #tagline {
+                font-size: 20px;
+                top: -0.8in;
+            }
+            .button-group {
+                top: -4.5in;
+                width: 150px;
+            }
+            .fake-button, .donate-button, .new-button {
+                padding: 10px 20px;
+            }
+            footer {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 200px;
+                height: 200px;
+                left: calc(50% - 100px);
+            }
+            #tagline {
+                font-size: 16px;
+                top: -0.5in;
+            }
+            .button-group {
+                top: -3.5in;
+                width: 120px;
+            }
+            .fake-button, .donate-button, .new-button {
+                padding: 8px 15px;
+            }
+            footer {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>

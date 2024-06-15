@@ -35,7 +35,7 @@
             display: inline-block;
             position: relative;
             margin: 10px;
-            top: -5.15in; /* Move the buttons down by an inch */
+            top: -5.41in; /* Move the buttons down by an inch */
             width: 200px;
         }
         .fake-button, .donate-button, .new-button {
@@ -87,11 +87,15 @@
         }
         .text-wrapper {
             position: relative;
-            top: -35px; /* Adjust this value to move the text container up or down */
+            top: -85px; /* Adjust this value to move the text container up or down */
+        }
+        .text-container p:first-child {
+            font-weight: bold;
+            text-align: center;
         }
         .new-buttons {
             position: absolute; /* Use absolute positioning */
-            top: 4.7in; /* Adjust this value to move the buttons up or down */
+            top: 4.5in; /* Adjust this value to move the buttons up or down */
             left: 1in; /* Adjust this value to move the buttons left or right */
             display: flex;
             justify-content: center; /* Center horizontally */
@@ -109,24 +113,72 @@
             transition: background 0.3s;
             margin: 0 5px; /* Add some space between the buttons */
         }
-        .firewood-text {
-            position: absolute;
-            color: #fff;
-            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
-            font-size: 2em; /* Adjust size as needed */
-            top: 285px; /* Adjust position as needed */
-            left: 895px; /* Adjust position as needed */
+        @media (max-width: 768px) {
+            #logo {
+                width: 200px;
+                height: 200px;
+                left: calc(50% - 100px);
+                top: -0.5in;
+            }
+            .button-group {
+                top: -4.5in;
+                width: 150px;
+            }
+            .fake-button, .donate-button, .new-button {
+                padding: 10px 20px;
+            }
+            .new-buttons {
+                top: 3.5in;
+                width: calc(100% - 1in);
+                left: 0.5in;
+            }
+            .new-button {
+                width: calc(45% - 10px);
+            }
+            footer {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            #logo {
+                width: 150px;
+                height: 150px;
+                left: calc(50% - 75px);
+                top: -0.3in;
+            }
+            .button-group {
+                top: -3.5in;
+                width: 120px;
+            }
+            .fake-button, .donate-button, .new-button {
+                padding: 8px 15px;
+            }
+            .new-buttons {
+                top: 3in;
+                width: calc(100% - 0.5in);
+                left: 0.25in;
+            }
+            .new-button {
+                width: calc(50% - 10px);
+            }
+            footer {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
     <div id="container">
         <div id="logo">
-            <img src="Logo1.png" alt="Logo" />
+            <a href="home.html">
+                <img src="Logo1.png" alt="Logo" />
+            </a>
         </div>
         <div class="text-wrapper">
             <div class="text-container">
-                <p>As a new organization, we know that you will have questions. We have answers. We have no idea what they are yet but, were on it. Worry not. We are smart and crafty and will come up with a bunch of stuff to make you think you can trust us. G_d bless you for your faith in us. Let’s hope we’ve got this! Or something like that.</p>
+                <p>About Us</p>
+                <p>As a new organization, we know that you will have questions. We have answers. We have no idea what they are yet but, we're on it. Worry not. We are smart and crafty and will come up with a bunch of stuff to make you think you can trust us. G_d bless you for your faith in us. Let’s hope we’ve got this! Or something like that.</p>
             </div>
         </div>
         <div class="new-buttons">
@@ -149,7 +201,6 @@
             </div>
         </div>
     </div>
-    <div class="firewood-text">About Us</div>
     <footer>
         <div>
             Cords for Care 704C 13th St. E, #403 Whitefish, MT 59937 
